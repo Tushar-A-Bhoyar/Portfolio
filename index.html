@@ -9,18 +9,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg-primary: #080e1a;
-    --bg-secondary: #0d1525;
-    --bg-card: #111c2e;
-    --bg-card-hover: #152036;
-    --accent: #00b4e6;
-    --accent-light: #33c5ed;
-    --accent-glow: rgba(0, 180, 230, 0.15);
-    --text-primary: #e8edf5;
-    --text-secondary: #7a8fa8;
-    --text-muted: #4a607a;
-    --border: rgba(255,255,255,0.06);
-    --border-accent: rgba(0,180,230,0.3);
+    --bg-primary: #020617;
+    --bg-secondary: rgba(255,255,255,0.03);
+    --bg-card: rgba(255,255,255,0.04);
+    --bg-card-hover: rgba(79,184,255,0.07);
+    --accent: #4fb8ff;
+    --accent-light: #6dd3ff;
+    --accent-glow: rgba(79,184,255,0.22);
+    --text-primary: #f8fbff;
+    --text-secondary: rgba(248,251,255,0.72);
+    --text-muted: rgba(248,251,255,0.55);
+    --border: rgba(255,255,255,0.08);
+    --border-accent: rgba(79,184,255,0.40);
     --gold: #f0a500;
     --green: #00c896;
   }
@@ -275,21 +275,22 @@
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: #4fb8ff;
+    color: var(--accent);
     margin-bottom: 14px;
   }
 
   .section-title {
     font-family: 'Syne', sans-serif;
-    font-size: clamp(2.4rem, 3.5vw, 4rem);
+    font-size: clamp(2.8rem, 4vw, 4.6rem);
     font-weight: 800;
     letter-spacing: -0.03em;
-    margin-bottom: 24px;
-    line-height: 1.05;
-    max-width: 920px;
+    margin-bottom: 26px;
+    line-height: 1.04;
+    max-width: 980px;
+    color: var(--text-primary);
   }
 
-  .section-title span { color: #4fb8ff; }
+  .section-title span { color: var(--accent); }
 
   .section-desc {
     color: var(--text-secondary);
@@ -315,9 +316,9 @@
   }
 
   .about-text p {
-    color: rgba(248,251,255,0.72);
+    color: var(--text-secondary);
     font-size: 1rem;
-    line-height: 1.85;
+    line-height: 1.82;
     margin-bottom: 22px;
   }
 
@@ -331,12 +332,12 @@
   .about-meta-item {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     font-size: 0.92rem;
-    color: rgba(248,251,255,0.68);
+    color: var(--text-secondary);
   }
 
-  .about-meta-item svg { color: #4fb8ff; flex-shrink: 0; }
+  .about-meta-item svg { color: var(--accent); flex-shrink: 0; }
 
   .stats-grid {
     display: grid;
@@ -347,25 +348,25 @@
   .stat-card {
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 18px;
-    padding: 28px 24px;
+    border-radius: 24px;
+    padding: 30px 26px;
     transition: border-color 0.2s ease, transform 0.2s ease;
   }
 
-  .stat-card:hover { border-color: rgba(79,184,255,0.4); transform: translateY(-1px); }
+  .stat-card:hover { border-color: var(--border-accent); transform: translateY(-1px); }
 
   .stat-card .stat-num {
     font-family: 'Syne', sans-serif;
-    font-size: 2.1rem;
+    font-size: 2.2rem;
     font-weight: 800;
-    color: #4fb8ff;
+    color: var(--accent);
     line-height: 1;
     margin-bottom: 8px;
   }
 
   .stat-card .stat-label {
-    font-size: 0.82rem;
-    color: rgba(248,251,255,0.68);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
   }
 
   .quote-card {
@@ -398,34 +399,34 @@
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 24px;
-    padding: 30px;
+    padding: 34px 30px;
     transition: border-color 0.2s ease, transform 0.2s ease;
   }
 
-  .skill-category:hover { border-color: rgba(79,184,255,0.4); transform: translateY(-1px); }
+  .skill-category:hover { border-color: var(--border-accent); transform: translateY(-1px); }
 
   .skill-category-title {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     font-weight: 700;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: #4fb8ff;
-    margin-bottom: 22px;
+    color: var(--accent);
+    margin-bottom: 20px;
   }
 
   .skill-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
   }
 
   .skill-tag {
-    padding: 8px 16px;
-    background: rgba(255,255,255,0.03);
+    padding: 9px 18px;
+    background: rgba(255,255,255,0.04);
     border: 1px solid rgba(255,255,255,0.12);
     border-radius: 999px;
-    font-size: 0.82rem;
-    color: rgba(248,251,255,0.78);
+    font-size: 0.84rem;
+    color: var(--text-secondary);
     transition: border-color 0.2s ease, color 0.2s ease;
   }
 
@@ -435,17 +436,17 @@
   .timeline {
     position: relative;
     margin-top: 48px;
-    padding-left: 32px;
+    padding-left: 36px;
   }
 
   .timeline::before {
     content: '';
     position: absolute;
-    left: 6px;
-    top: 8px;
+    left: 8px;
+    top: 12px;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(to bottom, var(--accent), transparent);
+    background: linear-gradient(to bottom, var(--accent), transparent 70%);
   }
 
   .timeline-item {
@@ -467,40 +468,40 @@
   .timeline-dot.filled { background: var(--accent); }
 
   .exp-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 28px 32px;
-    transition: border-color 0.2s;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px;
+    padding: 32px 32px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
   }
 
-  .exp-card:hover { border-color: var(--border-accent); }
+  .exp-card:hover { border-color: var(--border-accent); transform: translateY(-1px); }
 
   .exp-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 16px;
-    gap: 16px;
+    margin-bottom: 18px;
+    gap: 24px;
     flex-wrap: wrap;
   }
 
   .exp-company {
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 8px;
   }
 
   .exp-role {
     font-family: 'Syne', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.15rem;
+    font-weight: 700;
     color: var(--text-primary);
   }
 
@@ -547,9 +548,9 @@
   }
 
   .exp-bullets li {
-    font-size: 0.88rem;
+    font-size: 0.92rem;
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.8;
     padding-left: 18px;
     position: relative;
   }
@@ -612,28 +613,28 @@
   }
 
   .project-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 28px;
-    transition: border-color 0.2s, transform 0.2s;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px;
+    padding: 32px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
     position: relative;
   }
 
-  .project-card:hover { border-color: var(--border-accent); transform: translateY(-2px); }
+  .project-card:hover { border-color: var(--border-accent); transform: translateY(-1px); }
 
   .project-card-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
 
   .project-icon {
-    width: 44px; height: 44px;
-    background: rgba(0,180,230,0.12);
-    border: 1px solid var(--border-accent);
-    border-radius: 10px;
+    width: 48px; height: 48px;
+    background: rgba(79,184,255,0.12);
+    border: 1px solid rgba(79,184,255,0.24);
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -642,23 +643,23 @@
 
   .project-title {
     font-family: 'Syne', sans-serif;
-    font-size: 1.05rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
 
   .project-company {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     color: var(--accent);
-    font-weight: 500;
-    margin-bottom: 12px;
+    font-weight: 600;
+    margin-bottom: 14px;
   }
 
   .project-desc {
-    font-size: 0.87rem;
+    font-size: 0.9rem;
     color: var(--text-secondary);
-    line-height: 1.7;
+    line-height: 1.8;
     margin-bottom: 18px;
   }
 
@@ -670,12 +671,12 @@
   }
 
   .project-tag {
-    padding: 4px 11px;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    font-size: 0.75rem;
-    color: var(--text-muted);
+    padding: 6px 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
   }
 
   .project-link {
@@ -701,27 +702,27 @@
   .contact-items {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
   }
 
   .contact-item {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px 24px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 22px 26px;
     display: flex;
     align-items: center;
-    gap: 16px;
-    transition: border-color 0.2s;
+    gap: 18px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
   }
 
-  .contact-item:hover { border-color: var(--border-accent); }
+  .contact-item:hover { border-color: var(--border-accent); transform: translateY(-1px); }
 
   .contact-icon {
-    width: 40px; height: 40px;
-    background: rgba(0,180,230,0.1);
-    border: 1px solid var(--border-accent);
-    border-radius: 8px;
+    width: 44px; height: 44px;
+    background: rgba(79,184,255,0.12);
+    border: 1px solid rgba(79,184,255,0.24);
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -732,13 +733,13 @@
   .contact-label {
     font-size: 0.72rem;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
     color: var(--text-muted);
-    margin-bottom: 3px;
+    margin-bottom: 4px;
   }
 
   .contact-value {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text-primary);
   }
 
